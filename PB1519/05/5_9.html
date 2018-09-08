@@ -1,0 +1,52 @@
+<!DOCTYPE html>     										<!--声明HTML 5-->
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   <!--声明编码方式-->
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<!--<script src="cordova.js"></script>-->   						<!--备用生成APP的JS文件-->
+<link rel="stylesheet" href="jquery.mobile.min.css" />     			<!--引入jQuery Mobile样式-->
+<script src="jquery-1.7.1.min.js"></script>     						<!--引入jQuery脚本-->
+<script src="jquery.mobile.min.js"></script>     					<!--引入jQuery Mobile脚本-->
+<script>
+	$( "#mypanel" ).trigger( "updatelayout" );                         <!--对面板进行声明-->
+</script> 
+</head>               
+<body>
+	<div data-role="page">
+		<div data-role="panel" id="mypanel">					<!--这个就是面板-->
+			<h4>这个就是面板</h4>							<!--面板中加入内容-->
+		</div>
+		<div data-role="header" data-position="fixed">
+			<a href="#mypanel">打开</a>    
+			<h1>头部栏</h1>    
+			<a href="#">隐藏</a>
+		</div>
+		<div data-role="content">
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+			<h1>面板可以弹出</h1>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a id="chat" href="#" data-icon="custom">微信</a></li>        
+					<li><a id="email" href="#" data-icon="custom">通讯录</a></li>        
+					<li><a id="skull" href="#" data-icon="custom">找朋友</a></li>        
+					<li><a id="beer" href="#" data-icon="custom">设置</a></li>         
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>    

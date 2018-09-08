@@ -1,0 +1,80 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />     
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>     
+<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>   
+</head>               
+<body>
+	<div data-role="page" id="home" data-title="我的记事本">
+		<div data-role="header" data-position="fixed"> 
+            <h1>我的记事本</h1>  
+			<a href="#new" data-icon="custom">新建</a>
+        </div>
+		<div data-role="content">
+			<ul data-role="listview">
+				<li><a href="#">
+					<h1>记事本一</h1>
+					<p>2013/11/3 星期日</p>
+				</a></li>
+				<li><a href="#">
+					<h1>记事本二</h1>
+					<p>2013/11/4 星期一</p>
+				</a></li>	
+				<li><a href="#">
+					<h1>记事本三</h1>
+					<p>2013/11/5 星期二</p>
+				</a></li>	
+				<li><a href="#">
+					<h1>记事本四</h1>
+					<p>2013/11/6 星期三</p>
+				</a></li>	
+				<li><a href="#">
+					<h1>记事本五</h1>
+					<p>2013/11/7 星期四</p>
+				</a></li>	
+				<li><a href="#">
+					<h1>记事本六</h1>
+					<p>2013/11/8 星期五</p>
+				</a></li>	
+				<li><a href="#">
+					<h1>记事本七</h1>
+					<p>2013/11/9 星期六</p>
+				</a></li>	
+				<li><a href="#">
+					<h1>记事本八</h1>
+					<p>2013/11/10 星期日</p>
+				</a></li>	
+				<li><a href="#">
+					<h1>记事本九</h1>
+					<p>2013/11/11 星期一</p>
+				</a></li>	
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed">
+		</div>
+	</div>
+	<!---->
+	<div data-role="page" id="new" data-title="新建记事本">
+		<div data-role="header" data-position="fixed"> 
+            <h1>新建记事本</h1>  
+			<a href="#home" data-icon="back">返回</a>
+        </div>
+		<div data-role="content">
+			<form>
+				<label for="note">请输入内容:</label>
+				<textarea name="note" id="note"></textarea>
+			</form>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" data-icon="arrow-u">提交</a></li>                 
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

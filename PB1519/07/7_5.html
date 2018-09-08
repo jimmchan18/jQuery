@@ -1,0 +1,37 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fixed Positioning Example</title>     
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<link rel="stylesheet" href="jquery.mobile.min.css" />     
+<script src="jquery-1.7.1.min.js"></script>     
+<script src="jquery.mobile.min.js"></script>  
+<script>
+function set_color()
+{
+	var red = $("#red").val();
+	var green = $("#green").val();
+	var blue =$("#blue").val();
+	var color = "RGB("+red+","+green+","+blue+")";
+	$("div").css("background-color",color);
+}
+</script>   
+</head>               
+<body>
+	<div data-role="page" onclick="al();">
+		<div data-role="header">
+			<h1>调色板</h1>
+		</div>
+		<div data-role="content">
+		</div>
+		<div data-role="footer">
+			<form>
+				<input name="red" id="red" min="0" max="255" value="0" type="range" onchange="set_color();" />
+				<input name="green" id="green" min="0" max="255" value="0" type="range" onchange="set_color();" />
+				<input name="blue" id="blue" min="0" max="255" value="0" type="range" onchange="set_color();" />
+			</form>
+		</div>
+    </div>
+</body>
+</html>

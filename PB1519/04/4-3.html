@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>不断闪动的页面 </title>
+<!--jQuery Mobile样式文件-->
+　　<link rel="stylesheet" href="jquery.mobile.min.css" />	
+	<!--引入jQuery脚本-->
+　　<script src="jquery-1.7.1.min.js"></script>	
+　　<!--引入jQuery Mobile脚本-->
+	<script src="jquery.mobile.min.js"></script>
+<!--<script type="text/javascript" src="cordova.js"></script>-->
+<script type="text/javascript">
+$(document).ready(function(){
+	var i=0;									//声明标志变量
+	setInterval(function(){
+		if(i==0)
+		{
+			$("div").attr(“data-theme”,”a”);			//将page控件的主题设为a		
+			i=1;								//标志背景颜色的状态字
+		}else
+		{
+			$("div").attr(“data-theme”,”c”);		//将page控件的主题设为a		
+			i=0;								//标志背景颜色的状态字
+		}
+	},100);									//时间间隔为0.1秒
+	});
+</script>
+</head>
+<body>
+	<!--为page控件加入主题、默认为黑色-->
+	<div data-role="page" data-theme="a">
+    </div>
+</body>
+</html>

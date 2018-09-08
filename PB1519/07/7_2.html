@@ -1,0 +1,50 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fixed Positioning Example</title>     
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />     
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>     
+<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>  
+<style type="text/css">
+.ui-icon-round{ background-image:url(round.png);}
+</style>    
+<script>
+function but_click()
+{
+	var temp1=$("#zhanghao").val();
+	if(temp1=="账号：")
+	{
+		alert("请输入QQ号码！")
+	}
+	else
+	{
+		var zhanghao=temp1.substring(3,temp1.length);
+		var temp2=$("#mima").val();
+		if(temp2=="密码：")
+		{
+			alert("请输入密码！");
+		}
+		else
+		{
+			var mima=temp2.substring(3,temp2.length);
+			alert("提交成功"+"你的QQ号码为"+zhanghao+"你的QQ密码为"+mima);
+		}
+	}
+}
+</script>
+</head>               
+<body>
+	<div data-role="page">
+		<div data-role="content">
+			<img src="http://img.itful.com/uploads/allimg/091209/0012204349-0.png" style="width:50%; margin-left:25%;"/>
+			<form action="#" method="post"> 
+				<input type="text" name="zhanghao" id="zhanghao" value="账号："  />
+				<input type="text" name="mima" id="mima" value="密码："  />
+				<a href="#" data-role="button" data-theme="b" id="login" onclick="but_click();">登录</a>
+			</form>
+		</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<!--<script src="cordova.js"></script>-->   
+<link rel="stylesheet" href="jquery.mobile.min.css" />     
+<script src="jquery-1.7.1.min.js"></script>     
+<script src="jquery.mobile.min.js"></script>   
+<script>
+	$( "#mypanel1" ).trigger( "updatelayout" ); 
+	$( "#mypanel2" ).trigger( "updatelayout" ); 
+</script> 
+<script type="text/javascript">
+    $(document).ready(function(){
+      $("div").bind("swiperight", function(event) {
+        $( "#mypanel1" ).panel( "open" );
+      });  
+    });
+	$(document).ready(function(){
+      $("div").bind("swipeleft", function(event) {
+        $( "#mypanel2" ).panel( "open" );
+      });  
+    });
+</script>
+</head>               
+<body>
+	<div data-role="page" data-theme="c">
+    	<div data-role="panel" id="mypanel1" data-theme="a">
+        	<h1>向右滑动屏幕</h1>
+		</div>
+		<div data-role="panel" id="mypanel2" data-theme="a" data-position="right">
+        	<h1>向左滑动屏幕</h1>
+		</div>
+        <div data-role="content">
+        	<h1>请尝试这对屏幕做些什么</h1>
+        </div>
+	</div>
+</body>
+</html>

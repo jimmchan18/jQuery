@@ -1,0 +1,95 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<!--<script src="cordova.js"></script>-->   
+<link rel="stylesheet" href="jquery.mobile.min.css" />     
+<script src="jquery-1.7.1.min.js"></script>     
+<script src="jquery.mobile.min.js"></script>    
+<script type="text/javascript">
+$(document).ready(function()
+{
+	$screen_width=$(window).width();								//获取屏幕宽度
+	$pic_height=$(window).width()-80;								//图片高度为屏幕空白高度
+	$pic_height=$pic_height+"px";
+	$("div[data-role=top_pic]").width("100%").height($pic_height);
+});
+</script> 
+
+<script>
+var Is_play=0;
+var Played_id=0;
+var Music_name[]=new Array("Never say never","Some body to love","Pray","My World","Boyfriend","To Love");
+var Music_docname[]=new Array("no0","no1","no2","no3","no4","no5"); 
+function onmusicplay()
+{
+	var myVideo=document.getElementById("music_player");
+	var btn_paly=document.getElementById("btn_play");
+	if(Is_play==0)
+	{
+		myVideo.play();
+		Is_play=1;
+		btn_paly.innerHTML="暂停";
+	}else
+	{
+		myVideo.pause();
+		Is_play=0;
+		btn_paly.innerHTML="播放";
+	}
+}
+function play_pre()
+{
+	if(Played_id==0)
+	{
+		Played_id=5;
+	}
+	else
+	{
+		Played_id=Played_id-1;
+	}
+	var ogg_s=document.getElementById("source_ogg");
+	var ogg_m=document.getElementById("source_mp3");
+	ogg_s.src=Music_docname[Played_id]+".ogg";
+	ogg_m.src=Music_docname[Played_id]+".mp3";
+	Is_play=1;
+	onmusicplay();
+}
+</script>
+</head>               
+<body>
+	<audio id="music_player" preload="auto" style=" display:none;">
+    	<source id="source_ogg" src="song.ogg" type="audio/ogg" />
+  		<source id="source_mp3" src="song.mp3" type="audio/mpeg" />
+    </audio>
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="fixed" data-fullscreen="true">
+			<a href="#">返回</a>
+			<h1>Justin Binber中国行</h1>
+		</div>
+        <div data-role="top_pic" style="background-color:#000; width:100%;">
+        	<img src="images/justin.jpg" width="100%" height="100%"/>
+        </div>
+        <div data-role="content">
+        	<ul data-role="listview" data-inset="true">
+    			<li><a href="#">Never say never</a></li>
+				<li><a href="#">Some body to love</a></li>
+				<li><a href="#">Pray</a></li>
+				<li><a href="#">My World</a></li>
+				<li><a href="#">Boyfriend</a></li>
+				<li><a href="#">To Love</a></li>
+			</ul>
+        </div>
+		<div data-role="footer" data-position="fixed" data-fullscreen="true">
+			<div data-role="navbar">
+				<ul>
+					<li onClick="#"><a href="#">上一首</a></li>        
+					<li onClick="onmusicplay();"><a href="#">播放</a></li>        
+					<li><a href="#">下一首</a></li>        
+					<li><a href="#">随便听听</a></li>         
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

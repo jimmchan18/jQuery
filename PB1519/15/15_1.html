@@ -1,0 +1,54 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fixed Positioning Example</title>     
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />     
+<script src="jquery-1.7.1.min.js"></script>     
+<script src="jquery.mobile.min.js"></script> 
+<script>
+var Is_play=0;
+function onmusicplay()
+{
+	var myVideo=document.getElementById("music_player");		//获取audio控件
+	var btn_paly=document.getElementById("btn_play");			//获取按钮控件
+	if(Is_play==0)										//如果当前状态为暂停
+	{
+		myVideo.play();									//播放音乐
+		Is_play=1;										//更新播放状态
+		btn_paly.innerHTML="暂停";						//刷新页面
+	}else
+	{
+		myVideo.pause();								//暂停
+		Is_play=0;										//更新播放状态
+		btn_paly.innerHTML="播放";						//刷新页面
+	}
+}
+</script>
+</head>               
+<body>
+	<!--audio控件-->
+	<audio id="music_player" preload="auto" style=" display:none;">
+   		<source src="song.ogg" type="audio/ogg" />
+  			<source src="song.mp3" type="audio/mpeg" />
+  		</audio>
+	<div data-role="page">
+	    	<div data-role="header" data-position="fixed" data-fullscreen="true">
+	        	<a href="#">返回</a>    
+              <h1>头部栏</h1>    
+        </div>
+      <div data-role="footer" data-position="fixed" data-fullscreen="true">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#">上一首</a></li>     
+					<!--为按钮添加响应函数onmusicplay()-->   
+					<li onClick="onmusicplay();"><a href="#" id="btn_play">播放</a></li>        
+					<li><a href="#">下一首</a></li>        
+					<li><a href="#">随便听听</a></li>         
+				</ul>
+			</div>
+		</div>
+    </div>
+</body>
+</html>

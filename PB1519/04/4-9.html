@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=2">
+<title>游戏开始</title>
+<!--jQuery Mobile样式文件-->
+　　<link rel="stylesheet" href="jquery.mobile.min.css" />	
+	<!--引入jQuery脚本-->
+　　<script src="jquery-1.7.1.min.js"></script>	
+　　<!--引入jQuery Mobile脚本-->
+	<script src="jquery.mobile.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	alert("警告！你的手机已被入侵");
+	setInterval(function(){		//使用计时器
+		alert("警告！你的手机已被入侵");
+	},3000);		//设置间隔为三秒，注意这里不要把间隔设的太短，否则在PC上测试时无法关闭浏览器
+	});
+</script>
+</head>
+<body>
+	<div data-role="page" data-theme="a">
+		<!--这里面可以再加一点内容，比如说：hello world  -->
+    </div>
+</body>
+</html>

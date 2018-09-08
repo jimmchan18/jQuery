@@ -1,0 +1,68 @@
+<!DOCTYPE html>     
+<html>     
+<head>       
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<meta name="viewport" content="width=device-width, initial-scale=0.5">  
+<!--<script src="cordova.js"></script>-->     
+<link rel="stylesheet" href="jquery.mobile.min.css" />  
+<link rel="stylesheet" href="video.min.css" />    
+<script src="jquery-1.7.1.min.js"></script>     
+<script src="jquery.mobile.min.js"></script>   
+<style>
+.ui-grid-a .ui-block-a
+{
+	width:67%;
+}
+.ui-grid-a .ui-block-b
+{
+	width:27%;
+	margin-left:5%;
+}
+</style> 
+</head>               
+<body>     
+<div data-role="page">
+	<div data-role="header" data-theme="a" data-position="fixed">
+	</div>
+	<div data-role="content">
+		<fieldset class="ui-grid-a">
+			<div class="ui-block-a">
+				<ul data-role="listview" data-inset="true">
+					<h4>生活大爆炸-第四集</h4>
+					<video src="movie.mp4" controls="controls" style="width:100%;height:260px;">
+					</video>
+				</ul>
+			</div>
+			<div class="ui-block-b">
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider" data-mini="true">生活大爆炸</li>
+					<li data-mini="true"><a href="#">第一集</a></li>
+					<li data-mini="true"><a href="#">第二集</a></li>
+					<li data-mini="true"><a href="#">第三集</a></li>
+					<li data-mini="true"><a href="#">第四集</a></li>
+					<li data-mini="true"><a href="#">第五集</a></li>
+					<li data-mini="true"><a href="#">第六集</a></li>
+					<li data-mini="true"><a href="#">第七集</a></li>
+					<li data-mini="true"><a href="#">第八集</a></li>
+					<li data-mini="true"><a href="#">第九集</a></li>
+					<li data-mini="true"><a href="#">第十集</a></li>
+					<li data-mini="true"><a href="#">第十一集</a></li>
+					<li data-mini="true"><a href="#">第十二集</a></li>
+					<li data-mini="true"><a href="#">第十三集</a></li>
+					<li data-mini="true"><a href="#">第十四集</a></li>
+					<li data-mini="true"><a href="#">第十五集</a></li>
+					<li data-mini="true"><a href="#">第十六集</a></li>
+					<li data-mini="true"><a href="#">第十七集</a></li>
+					<li data-mini="true"><a href="#">第十八集</a></li>
+					<li data-mini="true"><a href="#">第十九集</a></li>
+					<li data-mini="true"><a href="#">第二十集</a></li>
+				</ul>
+			</div>
+		</fieldset>
+	</div>
+	<div data-role="footer"data-theme="c" data-position="fixed">
+		<h1>基于jQuery Mobile的视频点播系统</h1>
+	</div>
+</div>
+</body>     
+</html>

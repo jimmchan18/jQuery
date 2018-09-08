@@ -1,0 +1,33 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>对话框中的表单</title>     
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<link rel="stylesheet" href="jquery.mobile.min.css" />     
+<script src="jquery-1.7.1.min.js"></script>     
+<script src="jquery.mobile.min.js"></script>  
+</head>               
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>请点击登录按钮</h1>
+		</div>
+		<div data-role="content" style="height:430px;">
+			<a href="#popupLogin" data-rel="popup" data-role="button">登录</a>
+			<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+				<form>
+					<div style="padding:10px 20px;">
+						<h3>请输入用户名和密码</h3>
+						<label for="un" class="ui-hidden-accessible">用户名:</label>
+						<input name="user" id="un" value="" placeholder="用户名" type="text">
+						<label for="pw" class="ui-hidden-accessible">Password:</label>
+						<input name="pass" id="pw" value="" placeholder="密码" type="password">
+						<button type="submit" data-icon="check" data-theme="b">登录</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>     
+<html>     
+<head>       
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<meta name="viewport" content="width=device-width, initial-scale=0.5">  
+<!--<script src="cordova.js"></script>-->     
+<link rel="stylesheet" href="jquery.mobile.min.css" />  
+<link rel="stylesheet" href="video.min.css" />    
+<script src="jquery-1.7.1.min.js"></script>     
+<script src="jquery.mobile.min.js"></script>   
+<style>
+.ui-grid-a .ui-block-a
+{
+	width:37%;
+}
+.ui-grid-a .ui-block-b
+{
+	width:57%;
+	margin-left:5%;
+}
+</style> 
+</head>               
+<body>     
+<div data-role="page">
+	<div data-role="header" data-theme="a" data-position="fixed">
+	</div>
+	<div data-role="content">
+		<fieldset class="ui-grid-a">
+			<div class="ui-block-a">
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider" data-theme="a">视频分类</li>
+					<li data-theme="a"><a href="#">电影</a></li>
+					<li><a href="#">动漫</a></li>
+					<li><a href="#">短片</a></li>
+					<li><a href="#">电视剧</a></li>
+					<li><a href="#">视频教程</a></li>
+				</ul>
+			</div>
+			<div class="ui-block-b">
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider" >电影</li>
+					<li><a href="#">英雄联盟</a></li>
+					<li><a href="#">复仇者联盟</a></li>
+					<li><a href="#">钢铁侠</a></li>
+					<li><a href="#">蜘蛛侠</a></li>
+					<li><a href="#">拆弹部队</a></li>
+					<li><a href="#">海神号</a></li>
+					<li><a href="#">钢铁苍穹</a></li>
+					<li><a href="#">超级英雄</a></li>
+					<li><a href="#">超人</a></li>
+					<li><a href="#">闪电</a></li>
+					<li><a href="#">黑衣人</a></li>
+				</ul>
+			</div>
+		</fieldset>
+	</div>
+	<div data-role="footer"data-theme="c" data-position="fixed">
+		<h1>基于jQuery Mobile的视频点播系统</h1>
+	</div>
+</div>
+</body>     
+</html>

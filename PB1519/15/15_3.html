@@ -1,0 +1,44 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<!--<script src="cordova.js"></script>-->   
+<link rel="stylesheet" href="jquery.mobile.min.css" />     
+<script src="jquery-1.7.1.min.js"></script>     
+<script src="jquery.mobile.min.js"></script>    
+<script type="text/javascript">
+$(document).ready(function()
+{
+	$screen_width=$(window).width();
+	$pic_height=$screen_width*2/3;
+	$pic_height=$pic_height+"px";
+	$("div[data-role=top_pic]").width("100%").height($pic_height);
+});
+</script> 
+</head>               
+<body>
+	<div data-role="page" data-theme="a">
+        <div data-role="top_pic" style="background-color:#000; width:100%;">
+        	<img src="images/justin.jpg" width="100%" height="100%"/>
+        </div>
+        <div data-role="content" style="width:90%; margin-left:5%;">
+        	<ul data-role="listview" data-inset="true">
+    			<li><a href="#"><h1>Justin Bieber中国行</h1></a></li>
+    			<li><a href="#"><h1>怀旧中国风</h1></a></li>
+                <li><a href="#"><h1>那些伤感的歌</h1></a></li>
+			</ul>
+        </div>
+		<div data-role="footer" data-position="fixed" data-fullscreen="true">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#">Top 50</a></li>        
+					<li><a href="#">歌手</a></li>        
+					<li><a href="#">专辑</a></li>        
+					<li><a href="#">关于</a></li>         
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

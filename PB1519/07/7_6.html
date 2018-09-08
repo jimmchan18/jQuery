@@ -1,0 +1,42 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fixed Positioning Example</title>     
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<link rel="stylesheet" href="jquery.mobile.min.css" />     
+<script src="jquery-1.7.1.min.js"></script>     
+<script src="jquery.mobile.min.js"></script>  
+<script>
+$(document).ready(function(){
+	setInterval(function(){
+		var myswitch = $("select");
+		var i=myswitch[0].selectedIndex;
+		if(i==1)
+		{
+			$("div").css("background-color","black");
+		}
+		else
+		{
+			$("div").css("background-color","white");
+		}
+	},50);
+});
+</script>   
+</head>               
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>开关控件的使用</h1>
+		</div>
+		<div data-role="content" style="height:430px;">
+			<div data-role="fieldcontain">
+				<select name="slider" id="slider" data-role="slider">
+					<option value="off">关</option>
+					<option value="on">开</option>
+				</select> 
+			</div>
+		</div>
+	</div>
+</body>
+</html>

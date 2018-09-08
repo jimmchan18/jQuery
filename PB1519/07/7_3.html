@@ -1,0 +1,35 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>调查问卷 </title>     
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />     
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>     
+<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>  
+</head>               
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>调查问卷</h1>				<!—先加上一个头部栏和标题—>
+		</div>
+		<div data-role="content">
+			<form action="#" method="post"> 
+				<!-- placeholder属性的内容会在编辑框内以灰色显示-->
+					<input type="text" name="xingming" id="xingming" placeholder="请输入你的姓名："/>
+	        			<!--当data-clear-btn的值为true时，当该编辑框被选中-->
+					<!--可以单击右侧的按钮将其中的内容清空-->
+					<input type="tel" name="dianhua" id="dianhua" data-clear-btn="true" placeholder="请输入你的电话号码：">
+					<label for="adjust">请问您对本书有何看法？</label>
+					<!—这里用到了textarea而不是input-->
+					<textarea name="adjust" id="adjust"></textarea>
+					<!—通过for属性与textarea进行绑定-->
+					<label for="where">请问您是在哪里得到这本书的？</label>
+					<!--使用label时要使用for属性指向其对应控件的id-->
+					<textarea name="where" id="where"></textarea>
+					<a href="#" data-role="button">提交</a>
+			</form>
+		</div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=2">
+<title>不断闪动的页面 </title>
+<!--jQuery Mobile样式文件-->
+　　<link rel="stylesheet" href="jquery.mobile.min.css" />	
+	<!--引入jQuery脚本-->
+　　<script src="jquery-1.7.1.min.js"></script>	
+　　<!--引入jQuery Mobile脚本-->
+	<script src="jquery.mobile.min.js"></script>
+<!--<script type="text/javascript" src="cordova.js"></script>-->
+</head>
+<body>
+	<div data-role="page">
+	    <!--使用默认切换方式，效果为渐显-->
+  	    <a href="demo.html" data-role="button">页面间的切换</a>
+		<!-- data-transition="fade" 定义切换方式渐显-->
+         <a data-role="button" href="demo.html" data-transition="fade" data-direction="reverse">fade</a>
+		<!-- data-transition="pop" 定义切换方式扩散-->
+   	    <a data-role="button" href="demo.html" data-transition="pop" data-direction="reverse">pop</a>
+		<!-- data-transition="flip" 定义切换方式展开-->
+	    <a data-role="button" href="demo.html" data-transition="flip" data-direction="reverse">flip</a>
+		<!-- data-transition="turn" 定义切换方式翻转覆盖-->
+         <a data-role="button" href="demo.html" data-transition="turn" data-direction="reverse">turn</a>
+		<!-- data-transition="flow" 定义切换方式扩散覆盖-->
+    	     <a data-role="button" href="demo.html" data-transition="flow" data-direction="reverse">flow</a>
+		<!-- data-transition="slidefade" 定义切换方式滑动渐显-->
+		<a data-role="button" href="demo.html" data-transition="slidefade" >slidefade</a>
+		<!-- data-transition="slide" 定义切换方式滑动-->
+         <a data-role="button" href="demo.html" data-transition="slide" data-direction="reverse">slide</a>
+		<!-- data-transition="slidedown" 定义切换方式向下滑动-->
+		<a data-role="button" href="demo.html" data-transition="slidedown" >slidedown</a>
+		<!-- data-transition="slideup"  定义切换方式向上滑动-->
+	    <a data-role="button" href="demo.html" data-transition="slideup" >slideup</a>
+		<!-- data-transition="none"  定义切换方式“无"-->
+	    <a data-role="button" href="demo.html" data-transition="none" data-direction="reverse">none</a>
+    </div>
+</body>
+</html>

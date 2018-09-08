@@ -1,0 +1,44 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fixed Positioning Example</title>     
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />     
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>     
+<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>  
+<style type="text/css">
+.ui-icon-round{ background-image:url(round.png);}
+</style>    
+</head>               
+<body>
+	<div data-role="page" data-theme="a">
+		<div data-role="header">
+			<a href="#">返回</a>
+			<h1>音乐播放器</h1>
+		</div>
+		<div data-role="content">
+			<div data-role="controlgroup">
+				<a href="#" data-role="button">no air</a>
+				<a href="#" data-role="button">
+					<img src="1.jpg" style="width:80%;"/>
+				</a>
+				<a href="#" data-role="button">no air</a>
+				<a href="#" data-role="button">Jordon spark</a>
+			</div>
+			<form>
+				<input name="jindu" id="jindu" min="0" max="100" value="50" type="range">
+			</form>
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#" data-role="button">后退</a>
+				<a href="#" data-role="button">播放</a>
+				<a href="#" data-role="button">暂停</a>
+				<a href="#" data-role="button">后退</a>
+			</div>
+		</div>
+		<div data-role="footer">
+			<h1>暂无歌词</h1>
+		</div>
+    </div>
+</body>
+</html>
